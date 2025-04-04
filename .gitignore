@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# Bun dependencies
+bun.lockb
+
 # next.js
 /.next/
 /out/
