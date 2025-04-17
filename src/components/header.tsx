@@ -5,7 +5,7 @@ import { Button } from "./ui/button"
 export function Menubar() {
     return (
         <div className="flex w-full gap-2">
-            <div className="flex flex-col items-center p-2 justify-center border-0 rounded-full bg-secondary">
+            <div className="flex flex-col items-center p-2 justify-center border-1 border-violet-500 rounded-full bg-secondary">
                 <Image src={logo} alt="logo image" className="h-10 w-10" />
             </div>
             <div className="bg-secondary text-white w-full flex items-center justify-between border-0 px-14 rounded-3xl ">
