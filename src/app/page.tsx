@@ -3,11 +3,12 @@
 import { Menubar } from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { CheckCheck, Copy, Plus } from "lucide-react";
+import { CheckCheck, Copy, Dot, Github, Instagram, Linkedin, Plus } from "lucide-react";
 import Image from "next/image";
 import avatar from "@/assets/img/avatar.svg";
 import Link from "next/link";
 import { useState } from "react";
+import { WorkList } from "@/components/works_list";
 
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
@@ -71,10 +72,43 @@ export default function Home() {
                 {isCopied ? <CheckCheck className="text-violet-500" /> : <Copy />}
               </Button>
             </div>
+            <div className="flex gap-2">
+              <Button variant="ghost" className="[&_svg:not([class*='size-'])]:size-7 px-0 py-0 hover:bg-transparent ">
+                <Link
+                  target="_blank"
+                  href="https://github.com/larissa04alves"
+                >
+                  <Github className="text-[#C0C0C0] " />
+                </Link>
+              </Button>
+              <Button variant="ghost" className="[&_svg:not([class*='size-'])]:size-7 px-0 py-0 hover:bg-transparent ">
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/in/larissa-alvess/"
+                >
+                  <Linkedin className="text-[#C0C0C0] " />
+                </Link>
+              </Button>
+              <Button variant="ghost" className="[&_svg:not([class*='size-'])]:size-7 px-0 py-0 hover:bg-transparent ">
+                <Link
+                  target="_blank"
+                  href="https://www.instagram.com/_alvesslari/"
+                >
+                  <Instagram className="text-[#C0C0C0] " />
+                </Link>
+              </Button>
+            </div>
           </div>
           <div className="flex w-32 h-32">
             <Image src={avatar} className="" alt="larissa avatar" />
           </div>
+        </div>
+      </div>
+
+      <div className="w-full ">
+        <div className="w-1/2 gap-8 py-10 bg-secondary text-white flex border-0 rounded-3xl flex-col px-10 ">
+          <h1 className="flex items-center text-lg font-bold"> <Dot size={25} /> Experiências</h1>
+          <WorkList />
         </div>
       </div>
     </div>

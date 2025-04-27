@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${intersans.variable} ${interLight.variable} antialiased flex flex-col min-h-screen bg-background text-foreground font-sans mx-36 my-5`}
+        className={`${intersans.variable} ${interLight.variable} antialiased flex flex-col min-h-screen bg-background text-foreground font-sans mx-40 my-5`}
       >
         {children}
       </body>
