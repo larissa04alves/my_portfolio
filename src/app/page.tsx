@@ -21,7 +21,7 @@ export default function Home() {
     }, 2000);
   }
   return (
-    <div className="flex flex-col w-full h-full items-center justify-center gap-10">
+    <div className="flex flex-col w-full h-full items-center justify-center gap-5">
       <Menubar />
       <div className="w-full py-10 bg-secondary text-white flex border-0 rounded-3xl flex-col justify-between px-10">
         <div className="flex pb-8 items-center justify-between text-[#C0C0C0]  ">
@@ -105,10 +105,23 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full ">
+      <div className="w-full flex gap-5">
         <div className="w-1/2 gap-8 py-10 bg-secondary text-white flex border-0 rounded-3xl flex-col px-10 ">
           <h1 className="flex items-center text-lg font-bold"> <Dot size={25} /> Experiências</h1>
           <WorkList />
+        </div>
+        <div className="w-1/2">
+          <div className=" bg-secondary py-5">
+            aaaaaaaaaaaaa
+          </div>
+          <div className=" flex gap-5">
+            <div className="w-1/2 bg-secondary py-5">
+              aaaaaaaaa
+            </div>
+            <div className="w-1/2 bg-secondary py-5">
+              aaaaaaaaa
+            </div>
+          </div>
         </div>
       </div>
     </div>
