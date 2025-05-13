@@ -9,6 +9,7 @@ import avatar from "@/assets/img/avatar.svg";
 import Link from "next/link";
 import { useState } from "react";
 import { WorkList } from "@/components/works_list";
+import { SkillsList } from "@/components/skills-icon";
 
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
@@ -110,15 +111,16 @@ export default function Home() {
           <h1 className="flex items-center text-lg font-bold"> <Dot size={25} /> Experiências</h1>
           <WorkList />
         </div>
-        <div className="w-1/2">
-          <div className=" bg-secondary py-5">
-            aaaaaaaaaaaaa
+        <div className="w-1/2 flex flex-col gap-5">
+          <div className=" bg-secondary py-5 text-white  border-0 px-5 rounded-3xl">
+            <h1>Hard Skills</h1>
+            <SkillsList />
           </div>
           <div className=" flex gap-5">
-            <div className="w-1/2 bg-secondary py-5">
+            <div className="w-1/2 bg-secondary text-white  py-5 px-5 border-0 rounded-3xl">
               aaaaaaaaa
             </div>
-            <div className="w-1/2 bg-secondary py-5">
+            <div className="w-1/2 bg-secondary py-5 text-white px-5 border-0 rounded-3xl">
               aaaaaaaaa
             </div>
           </div>
