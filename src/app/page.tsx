@@ -12,6 +12,7 @@ import { WorkList } from "@/components/works-list";
 import { LanguagesList } from "@/components/languages-list";
 import { FrameworksList } from "@/components/frameworks-list";
 import { OthersList } from "@/components/other-list";
+import imagem_desenho from "@/assets/img/imagem_desenho.jpeg";
 
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
@@ -108,30 +109,41 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full flex gap-5">
+      <div id="sobre" className="w-full flex gap-5">
+        <div className="bg-secondary w-1/2 flex flex-col gap-2 py-10 text-white  border-0 px-5 rounded-3xl">
+          <h1 className="flex items-center text-lg font-bold"> <Dot size={25} /> Sobre mim</h1>
+          <div className="flex">
+            <p className="pl-6 pr-2">Oi! Sou a Larissa, desenvolvedora full stack que curte criar soluções do back ao front, com foco em desempenho e organização. Trabalho com Java, Spring Boot, Node.js, React, SvelteKit e bancos como PostgreSQL. Já mexi com APIs, automações, cloud e adoro aprender coisa nova enquanto coloco projetos em prática.</p>
+            <Image src={imagem_desenho} alt="desenho larissa" className="rounded-full w-52 h-52 float-right" />
+          </div>
+        </div>
+
         <div className="w-1/2 gap-8 py-10 bg-secondary text-white flex border-0 rounded-3xl flex-col px-10 ">
           <h1 className="flex items-center text-lg font-bold"> <Dot size={25} /> Experiências</h1>
           <WorkList />
         </div>
-
+      </div>
+      <div className="w-full flex gap-5">
         <div className="w-1/2 flex flex-col gap-5">
-          <div className=" bg-secondary flex flex-col gap-2 py-5 text-white  border-0 px-5 rounded-3xl">
-            <h1 className="font-semibold text-lg">Linguagens</h1>
-            <LanguagesList />
-          </div>
-          <div className=" flex gap-5">
-            <div className="w-1/2 bg-secondary flex flex-col gap-2 text-white  py-5 px-5 border-0 rounded-3xl">
-              <h1 className="font-semibold text-lg">Frameworks</h1>
-              <FrameworksList />
+          <div className="flex flex-col gap-5">
+            <div className="bg-secondary flex flex-col gap-2 py-5 text-white  border-0 px-5 rounded-3xl">
+              <h1 className="font-semibold text-lg">Linguagens</h1>
+              <LanguagesList />
             </div>
-            <div className="w-1/2 bg-secondary flex flex-col gap-2 py-5 text-white px-5 border-0 rounded-3xl">
-              <h1 className="font-semibold text-lg">Outros conhecimentos</h1>
-              <OthersList />
+            <div className=" flex gap-5">
+              <div className="w-1/2 bg-secondary flex flex-col gap-2 text-white  py-5 px-5 border-0 rounded-3xl">
+                <h1 className="font-semibold text-lg">Frameworks</h1>
+                <FrameworksList />
+              </div>
+              <div className="w-1/2 bg-secondary flex flex-col gap-2 py-5 text-white px-5 border-0 rounded-3xl">
+                <h1 className="font-semibold text-lg">Outros conhecimentos</h1>
+                <OthersList />
+              </div>
             </div>
           </div>
+
         </div>
       </div>
-      <div></div>
     </div>
   );
 }
